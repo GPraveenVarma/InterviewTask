@@ -23,10 +23,7 @@ public class myService {
 	
 	
 	 Logger logger = LoggerFactory.getLogger(myService.class);
-	 
-	 
-	    
-	 
+
 	 @Autowired
 	    private EmployeeRepo repository;
 	 
@@ -36,19 +33,14 @@ public class myService {
      private IbeanB IbeanBimp1;
 	     
 
-
+            // getAllEmployes
 	    public List<Employes> getAllEmployes() {
-	    	
-	   
 	    	return repository.findAll();
 	    	}
 	    
 	    
 	    
-	    public Employes savingemp(Employes empss){
-	    	
-	    	logger.info("emps.....");
-	    	
+	    public Employes savingemp(Employes empss){	    	
 	    	return repository.save(empss);
 	    }
 	    
@@ -69,9 +61,12 @@ public class myService {
 	    
 	    public void deletebyid(int id)
 	    {
-	    	
 	    	repository.deleteById(id);
 	    }
+
+		public void test123(){
+			System.out.println("tettttt");
+		}
 
 
 }
